@@ -46,7 +46,7 @@ async function uploadVideo() {
 
   // Your container SAS token from Azure
   const sasToken =
-    "sp=racwli&st=2026-02-05T12:47:56Z&se=2026-12-31T21:02:56Z&sip=0.0.0.0&spr=https&sv=2024-11-04&sr=c&sig=j6FgXBOw%2BsaCYhSFKfVo0PVPVr6IaJtF3r5IQdLj9b0%3D";
+    "sp=racwdli&st=2026-02-05T12:59:05Z&se=2026-12-31T21:14:05Z&sip=0.0.0.0&spr=https&sv=2024-11-04&sr=c&sig=RfDMqLqBygWAgIGWLDSg86582LMZv5R9Kmj%2BL%2B7JKe4%3D";
 
   // Storage details
   const accountName = "graphicsdesign";
