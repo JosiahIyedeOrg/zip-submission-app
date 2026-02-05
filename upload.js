@@ -35,7 +35,7 @@ async function uploadVideo() {
 
   if (!allowedTypes.includes(file.type)) {
     statusText.textContent =
-  "Allowed formats: .mp4, .avi, .mov, .pdf, .doc, .docx";
+  "Allowed formats: .mp4, .avi, .zip, .rar, .mov, .pdf, .doc, .docx";
     return;
   }
 
@@ -46,16 +46,16 @@ async function uploadVideo() {
 
   // Your container SAS token from Azure
   const sasToken =
-    "sp=racwli&st=2025-11-03T17:01:47Z&se=2026-05-30T01:16:47Z&spr=https&sv=2024-11-04&sr=c&sig=cK6JnKzbTUpwlqTwcC8nYTu%2FsXpbTGEwW9Ezcqc5d78%3D";
+    "sv=2024-11-04&ss=bfqt&srt=sco&sp=rwdlacupiytfx&se=2027-08-31T20:26:35Z&st=2026-02-05T12:11:35Z&sip=0.0.0.0&spr=https&sig=fWvNz41N1%2FcCB4XFGI6rVfTelkKaDYFNyk2RXs4a2b4%3D";
 
   // Storage details
-  const accountName = "hrvideos";
+  const accountName = "graphicsdesign";
   const containerName = "vdeos";
   const blobName = encodeURIComponent(file.name);
 
   // Build the full blob URL
   const uploadUrl = `https://${accountName}.blob.core.windows.net/${containerName}/${blobName}?${sasToken}`;
-  const blobUrl = `https://hrvideos.blob.core.windows.net/vdeos?sp=racwli&st=2025-11-03T17:01:47Z&se=2026-05-30T01:16:47Z&spr=https&sv=2024-11-04&sr=c&sig=cK6JnKzbTUpwlqTwcC8nYTu%2FsXpbTGEwW9Ezcqc5d78%3D`;
+  const blobUrl = `https://graphicsdesign.blob.core.windows.net/?sv=2024-11-04&ss=bfqt&srt=sco&sp=rwdlacupiytfx&se=2027-08-31T20:26:35Z&st=2026-02-05T12:11:35Z&sip=0.0.0.0&spr=https&sig=fWvNz41N1%2FcCB4XFGI6rVfTelkKaDYFNyk2RXs4a2b4%3D`;
 
   const xhr = new XMLHttpRequest();
   xhr.open("PUT", uploadUrl, true);
