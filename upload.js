@@ -46,7 +46,7 @@ async function uploadVideo() {
 
   // Your container SAS token from Azure
   const sasToken =
-    "sp=racwli&st=2026-02-17T07:48:51Z&se=2026-03-31T16:03:51Z&sip=0.0.0.0&sv=2024-11-04&sr=c&sig=LFdBVqZurJPr%2BTu3URfo7gtL5C7oC2FwzcceKZ6M%2Bpg%3D";
+    "sp=racw&st=2026-02-17T08:08:19Z&se=2026-03-31T16:23:19Z&spr=https&sv=2024-11-04&sr=c&sig=tK2%2BdGrhrVOiFxZ7VqC6ven2f1zSbofcJReabJV5%2B6U%3D";
 
   // Storage details
   const accountName = "graphicsdesign";
@@ -55,7 +55,7 @@ async function uploadVideo() {
 
   // Build the full blob URL
   const uploadUrl = `https://${accountName}.blob.core.windows.net/${containerName}/${blobName}?${sasToken}`;
-  const blobUrl = `https://graphicsdesign.blob.core.windows.net/graphics?sp=racwli&st=2026-02-17T07:48:51Z&se=2026-03-31T16:03:51Z&sip=0.0.0.0&sv=2024-11-04&sr=c&sig=LFdBVqZurJPr%2BTu3URfo7gtL5C7oC2FwzcceKZ6M%2Bpg%3D`;
+  const blobUrl = `https://graphicsdesign.blob.core.windows.net/graphics?sp=racw&st=2026-02-17T08:08:19Z&se=2026-03-31T16:23:19Z&spr=https&sv=2024-11-04&sr=c&sig=tK2%2BdGrhrVOiFxZ7VqC6ven2f1zSbofcJReabJV5%2B6U%3D`;
 
   const xhr = new XMLHttpRequest();
   xhr.open("PUT", uploadUrl, true);
