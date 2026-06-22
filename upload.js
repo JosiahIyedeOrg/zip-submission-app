@@ -46,16 +46,16 @@ async function uploadVideo() {
 
   // Your container SAS token from Azure
   const sasToken =
-    "sp=racw&st=2026-02-17T08:08:19Z&se=2026-03-31T16:23:19Z&spr=https&sv=2024-11-04&sr=c&sig=tK2%2BdGrhrVOiFxZ7VqC6ven2f1zSbofcJReabJV5%2B6U%3D";
+    "sp=racwdli&st=2026-06-22T13:41:04Z&se=2027-05-31T21:56:04Z&spr=https&sv=2026-02-06&sr=c&sig=Gj6p5IFz%2Bdkjth6mYaIkWyIntYBcI0CDVKN9K4%2B4XZg%3D";
 
   // Storage details
   const accountName = "graphicsdesign";
-  const containerName = "graphics";
+  const containerName = "github";
   const blobName = encodeURIComponent(file.name);
 
   // Build the full blob URL
   const uploadUrl = `https://${accountName}.blob.core.windows.net/${containerName}/${blobName}?${sasToken}`;
-  const blobUrl = `https://graphicsdesign.blob.core.windows.net/graphics?sp=racw&st=2026-02-17T08:08:19Z&se=2026-03-31T16:23:19Z&spr=https&sv=2024-11-04&sr=c&sig=tK2%2BdGrhrVOiFxZ7VqC6ven2f1zSbofcJReabJV5%2B6U%3D`;
+  const blobUrl = `https://graphicsdesign.blob.core.windows.net/github?sp=racwdli&st=2026-06-22T13:41:04Z&se=2027-05-31T21:56:04Z&spr=https&sv=2026-02-06&sr=c&sig=Gj6p5IFz%2Bdkjth6mYaIkWyIntYBcI0CDVKN9K4%2B4XZg%3D`;
 
   const xhr = new XMLHttpRequest();
   xhr.open("PUT", uploadUrl, true);
